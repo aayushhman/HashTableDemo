@@ -18,7 +18,19 @@ namespace HashTableDemo
             ht.Add("Gender", "Male");
             ht.Add("g-mail", "aayushmandal196@gmail.com");
             ht.Add("post", "Manager");
-            Console.WriteLine(ht["Id"]);
+            foreach (Object key in ht.Keys)
+            {
+                Console.WriteLine( key+":"+ht[key]);
+            }
+            ht.Remove("post");
+            Console.WriteLine("--------------------------------");
+            foreach (Object key in ht.Keys)
+            {
+                Console.WriteLine(key + ":" + ht[key]);
+            }
+
+
+            // Console.WriteLine(ht["Id"]);
             Console.ReadLine();
         }
     }
